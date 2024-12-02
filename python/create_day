@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Usage: ./create_day.sh <year> <day>
+
+# Check if the required arguments are provided
+if [ "$#" -ne 2 ]; then
+  echo "Usage: $0 <year> <day>"
+  exit 1
+fi
+
+YEAR=$1
+DAY=$(printf "%02d" $2)  # Zero-pad the day number
+
+# Define the directory and file path
+DIR="year_${YEAR}"
+FILE="${DIR}/day_${DAY}.py"
+
+# Create the year directory if it doesn't exist
+mkdir -p "$DIR"
+
+# Check if the file already exists to avoid overwriting
+if [ -f "$FILE" ]; then
+  echo "File ${FILE} already exists. Exiting to avoid overwriting."
+  exit 1
+fi
+
+./get_input $YEAR $DAY
+
+# Write the template to the file
+cat <<EOL > "$FILE"
+import os
+from collections import defaultdict
+
+file_path = os.path.expanduser("\${INPUT_PATH}")
+
+with open(file_path, "r") as file:
+    input = file.read().strip().split("\\n")
+
+def part_one(input):
+    # TODO: Implement part one solution
+    pass
+
+def part_two(input):
+    # TODO: Implement part two solution
+    pass
+
+part_one(input)
+part_two(input)
+EOL
+
+echo "Created ${FILE} with template code."

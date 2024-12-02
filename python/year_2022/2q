@@ -1,0 +1,50 @@
+import os
+from collections import defaultdict
+
+file_path = os.path.expanduser("~/.cache/advent_of_code_inputs/2022/5")
+
+with open(file_path, "r") as file:
+    input = file.read().split("\n\n")
+
+def parse_grid(input):
+    grid = []
+    string = input[0].split("\n")
+
+    for row in range(len(string) - 1, -1, -1):
+        temp = []
+        for col in range(len(string[row])):
+            if col % 4 == 1:
+                temp.append(string[row][col])
+        if row != len(string) - 1:
+            grid.append(temp)
+
+    grid = [list(x) for x in zip(*grid)]
+
+    final_grid = []
+
+    for row in range(len(grid)):
+        temp = []
+        for col in range(len(grid[row])):
+            if grid[row][col].isalpha():
+                temp.append(grid[row][col])
+        final_grid.append(temp)
+
+
+
+    return grid
+
+def part_one(input):
+
+    grid = parse_grid(input)
+    # TODO: Implement part one solution
+    # first we are going to want to parse the input into directions and grid
+    # grid = parse_grid(input)
+    # directions
+    pass
+
+def part_two(input):
+    # TODO: Implement part two solution
+    pass
+
+part_one(input)
+part_two(input)
