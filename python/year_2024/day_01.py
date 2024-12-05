@@ -21,10 +21,7 @@ def part_one(input):
     sum = 0
     for x, y in zip(list1, list2):
         sum += abs(x - y)
-
-
     print(sum)
-
 
 def part_two(input):
     list1 = []
@@ -44,9 +41,6 @@ def part_two(input):
 
         sum += num * defdict[num]
     print(sum)
-
-
-
 
 part_one(input)
 part_two(input)
