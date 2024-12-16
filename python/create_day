@@ -24,17 +24,21 @@ if [ -f "$FILE" ]; then
   exit 1
 fi
 
-./get_input $YEAR $DAY
+get_input $YEAR $DAY
+INPUT_PATH="~/.cache/advent_of_code_inputs/${YEAR}/${DAY}"
 
 # Write the template to the file
 cat <<EOL > "$FILE"
 import os
-from collections import defaultdict
+# from collections import defaultdict
 
-file_path = os.path.expanduser("\${INPUT_PATH}")
+file_path = os.path.expanduser("${INPUT_PATH}")
 
 with open(file_path, "r") as file:
-    input = file.read().strip().split("\\n")
+    input = file.read().strip()
+
+def parse(input):
+    pass
 
 def part_one(input):
     # TODO: Implement part one solution
