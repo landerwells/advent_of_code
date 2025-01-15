@@ -39,10 +39,10 @@ defmodule Mix.Tasks.Gen do
   @impl Mix.Task
   def run(args) do
     with {[year: year], _, []} when year >= 2015 <-
-      OptionParser.parse(args, aliases: [y: :year], strict: [year: :integer]) do
+           OptionParser.parse(args, aliases: [y: :year], strict: [year: :integer]) do
       generate(year)
     else
-      _ -> Mix.shell().error("Invalid argument. Usage: mix gen <--year <year>>") 
+      _ -> Mix.shell().error("Invalid argument. Usage: mix gen <--year <year>>")
     end
   end
 
@@ -81,41 +81,41 @@ defmodule Mix.Tasks.Gen do
   defp year_subdir(year), do: Path.join(~w[advent_of_code solution year_#{year}])
 
   Mix.Generator.embed_template(:solution, """
-    defmodule AdventOfCode.Solution.Year<%= @year %>.Day<%= :io_lib.format("~2..0B", [@day]) %> do
-    def part1(_input) do
-    end
+  defmodule AdventOfCode.Solution.Year<%= @year %>.Day<%= :io_lib.format("~2..0B", [@day]) %> do
+  def part1(_input) do
+  end
 
-    def part2(_input) do
-    end
-    end
-    """)
+  def part2(_input) do
+  end
+  end
+  """)
 
   Mix.Generator.embed_template(:test, """
-    defmodule AdventOfCode.Solution.Year<%= @year %>.Day<%= :io_lib.format("~2..0B", [@day]) %>Test do
-    use ExUnit.Case, async: true
+  defmodule AdventOfCode.Solution.Year<%= @year %>.Day<%= :io_lib.format("~2..0B", [@day]) %>Test do
+  use ExUnit.Case, async: true
 
-    import AdventOfCode.Solution.Year<%= @year %>.Day<%= :io_lib.format("~2..0B", [@day]) %>
+  import AdventOfCode.Solution.Year<%= @year %>.Day<%= :io_lib.format("~2..0B", [@day]) %>
 
-    setup do
-    [
-    input: \"""
-    \"""
-    ]
-    end
+  setup do
+  [
+  input: \"""
+  \"""
+  ]
+  end
 
-    @tag :skip
-    test "part1", %{input: input} do
-    result = part1(input)
+  @tag :skip
+  test "part1", %{input: input} do
+  result = part1(input)
 
-    assert result
-    end
+  assert result
+  end
 
-    @tag :skip
-    test "part2", %{input: input} do
-    result = part2(input)
+  @tag :skip
+  test "part2", %{input: input} do
+  result = part2(input)
 
-    assert result
-    end
-    end
-    """)
+  assert result
+  end
+  end
+  """)
 end

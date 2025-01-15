@@ -1,5 +1,4 @@
 defmodule Mix.Tasks.Solve do
-
   use Mix.Task
 
   def run(args) do
@@ -8,7 +7,7 @@ defmodule Mix.Tasks.Solve do
     # need to parse the args
 
     case args do
-      [year, day | _] -> 
+      [year, day | _] ->
         # Convert the year and day to integers
         {year_int, _} = Integer.parse(year)
         {day_int, _} = Integer.parse(day)
@@ -17,7 +16,8 @@ defmodule Mix.Tasks.Solve do
         IO.puts("\nSolving Advent of Code for Year: #{year}, Day: #{day}\n")
 
         # Dynamically build the module name from year and day
-        mod = Module.concat(["AdventOfCode", "Solution", "Year#{year_int}", "Day#{pad_day(day_int)}"])
+        mod =
+          Module.concat(["AdventOfCode", "Solution", "Year#{year_int}", "Day#{pad_day(day_int)}"])
 
         if Code.ensure_loaded?(mod) do
           IO.puts("Part 1: #{apply(mod, :part1, [input])}")
@@ -26,8 +26,7 @@ defmodule Mix.Tasks.Solve do
           IO.puts("Module for Year #{year} Day #{day} not found")
         end
 
-
-      _ -> 
+      _ ->
         IO.puts("Usage: mix run -- <year> <day>")
     end
   end

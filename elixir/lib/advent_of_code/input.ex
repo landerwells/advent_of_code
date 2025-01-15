@@ -1,6 +1,5 @@
 defmodule AdventOfCode.Input do
   def get_input(year, day) do
-
     file = Path.join(cache_dir(), "/#{year}/#{day}")
 
     if !in_cache?(year, day) do
@@ -39,7 +38,8 @@ defmodule AdventOfCode.Input do
       "~/.cache/advent_of_code_inputs/cookie"
       |> Path.expand()
       |> File.read!()
-      |> String.trim()  # Trim to remove any trailing newlines or spaces
+      # Trim to remove any trailing newlines or spaces
+      |> String.trim()
 
     # Return the headers with the session token
     [cookie: "session=" <> session_token]
