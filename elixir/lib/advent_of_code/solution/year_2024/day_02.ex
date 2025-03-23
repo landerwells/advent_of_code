@@ -2,21 +2,17 @@ defmodule AdventOfCode.Solution.Year2024.Day02 do
   def part1(input) do
     lines = parse(input)
 
-    lines
-    |> Enum.filter(is_safe?())
-    |> Enum.count()
+    new_lines =
+      lines
+      |> Enum.map(fn line ->
+        line
+        # Pair each element with the next
+        |> Enum.zip(tl(line))
+        # Compute the difference
+        |> Enum.map(fn {a, b} -> b - a end)
+      end)
 
-
-  end
-
-  def is_safe?(line) do
-
-
-  end
-
-  def inc_or_dec(line) do
-  
-    
+    IO.puts(new_lines)
   end
 
   def parse(input) do
@@ -27,7 +23,6 @@ defmodule AdventOfCode.Solution.Year2024.Day02 do
       |> String.split()
       |> Enum.map(&String.to_integer/1)
     end)
-
   end
 
   def part2(_input) do

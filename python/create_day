@@ -9,11 +9,12 @@ if [ "$#" -ne 2 ]; then
 fi
 
 YEAR=$1
-DAY=$(printf "%02d" $2)  # Zero-pad the day number
+DAY=$2
+ZERO_DAY=$(printf "%02d" $2)  # Zero-pad the day number
 
 # Define the directory and file path
 DIR="year_${YEAR}"
-FILE="${DIR}/day_${DAY}.py"
+FILE="${DIR}/day_${ZERO_DAY}.py"
 
 # Create the year directory if it doesn't exist
 mkdir -p "$DIR"

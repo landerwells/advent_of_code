@@ -1,0 +1,115 @@
+
+15:04:27.767 [info] Loading 157 CA(s) from :otp store
+
+15:04:27.899 id=1 [debug] handled request client -> server initialize in 88ms
+
+15:04:27.904 [debug] sent notification server -> client window/logMessage
+
+15:04:27.907 [debug] NextLS v0.23.3 has initialized!
+
+15:04:27.907 [debug] sent notification server -> client window/logMessage
+
+15:04:27.907 [debug] Log file located at /Users/landerwells/Developer/advent_of_code/.elixir-tools/next-ls.log
+
+15:04:27.910 [debug] sent notification server -> client window/logMessage
+
+15:04:27.910 id=1668 [debug] sent request server -> client client/registerCapability
+
+15:04:27.910 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}
+
+15:04:29.624 [debug] sent notification server -> client window/logMessage
+
+15:04:29.624 [debug] Booting runtimes...
+
+15:04:29.627 id=38 [debug] sent request server -> client window/workDoneProgress/create
+
+15:04:29.630 [debug] sent notification server -> client $/progress
+
+15:04:29.640 [debug] sent notification server -> client window/logMessage
+
+15:04:29.640 [info] Beginning DB migration...
+
+15:04:29.645 [debug] sent notification server -> client window/logMessage
+
+15:04:29.645 [info] Database is on the latest version: 7
+
+15:04:29.645 [debug] sent notification server -> client window/logMessage
+
+15:04:29.645 [info] Finished DB migration...
+
+15:04:29.645 [debug] sent notification server -> client window/logMessage
+
+15:04:29.645 [info] Booting runtime for elixir.
+
+- elixir: /opt/homebrew/bin/elixir
+- zombie wrapper script: /Users/landerwells/Library/Application Support/.burrito/next_ls_erts-15.2_0.23.3/lib/next_ls-0.23.3/priv/cmd
+- working_dir: /Users/landerwells/Developer/advent_of_code/elixir
+- command: /opt/homebrew/bin/elixir --no-halt --sname nextls-runtime-1737320669645644917 --cookie B5KWOZJIEP7TC5LDWAQBZUILE3M23QPWYKPSADNHECVNH73HK4LA==== -S mix loadpaths --no-compile
+
+Environment: 
+
+LSP=nextls
+NEXTLS_PARENT_PID=g1h3J25leHQtbHMtMTczNzMyMDY2Nzc3Nzk1NTM3NUBMYW5kZXJzLU1CUAAAAOIAAAAAZ41o3A==
+MIX_ENV=dev
+MIX_TARGET=host
+MIX_BUILD_ROOT=.elixir-tools/_build
+ROOTDIR=false
+BINDIR=false
+RELEASE_ROOT=false
+RELEASE_SYS_CONFIG=false
+PATH=/opt/homebrew/bin:/Users/landerwells/Library/Application Support/.burrito/next_ls_erts-15.2_0.23.3/bin:/Users/landerwells/.local/share/nvim/mason/bin:/opt/homebrew/opt/ruby/bin:/Users/landerwells/.pyenv/shims:/Users/landerwells/.pyenv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/landerwells/.emacs.d/bin:/Users/landerwells/bin:/opt/homebrew/opt/ruby/bin:/Users/landerwells/.pyenv/bin:/Users/landerwells/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/landerwells/fvm/versions/stable/bin:/Users/landerwells/fvm/versions/stable/bin
+
+
+15:04:29.646 [debug] handled notification client -> server initialized in 1744ms
+
+15:04:29.649 [debug] handled notification client -> server textDocument/didOpen in 3ms
+
+15:04:29.660 id=2 [debug] handled request client -> server textDocument/documentSymbol in 10ms
+
+15:04:29.676 id=3 [debug] handled request client -> server textDocument/codeAction in 15ms
+
+15:04:29.676 id=4 [debug] handled request client -> server textDocument/codeAction in 95µs
+
+15:04:29.676 id=5 [debug] handled request client -> server textDocument/codeAction in 58µs
+
+15:04:29.676 id=6 [debug] handled request client -> server textDocument/codeAction in 63µs
+
+15:04:29.676 id=7 [debug] handled request client -> server textDocument/codeAction in 60µs
+
+15:04:29.676 id=8 [debug] handled request client -> server textDocument/codeAction in 64µs
+
+15:04:29.676 id=9 [debug] handled request client -> server textDocument/codeAction in 64µs
+
+15:04:30.671 [debug] sent notification server -> client window/logMessage
+
+15:04:30.671 [info] Connected to node nextls-runtime-1737320669645644917@Landers-MBP
+
+15:04:30.931 [debug] sent notification server -> client $/progress
+
+15:04:30.933 [debug] sent notification server -> client window/logMessage
+
+15:04:30.933 [debug] Runtime for folder elixir is ready...
+
+15:04:30.935 id=1892 [debug] sent request server -> client window/workDoneProgress/create
+
+15:04:30.936 [debug] sent notification server -> client $/progress
+
+15:04:30.968 [debug] sent notification server -> client $/progress
+
+15:04:30.968 [debug] sent notification server -> client window/logMessage
+
+15:04:30.968 [info] Compiled elixir!
+
+19:46:41.335 id=10 [debug] handled request client -> server textDocument/codeAction in 510µs
+
+19:46:41.447 id=11 [debug] handled request client -> server textDocument/codeAction in 302µs
+
+19:46:41.505 id=12 [debug] handled request client -> server textDocument/codeAction in 255µs
+
+19:46:41.592 id=13 [debug] handled request client -> server textDocument/codeAction in 397µs
+
+19:46:42.796 id=14 [debug] handled request client -> server shutdown in 2ms
+
+19:46:42.809 [debug] sent notification server -> client window/logMessage
+
+19:46:42.809 [info] The runtime for elixir has successfully shut down.
